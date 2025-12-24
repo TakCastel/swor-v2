@@ -1,0 +1,25 @@
+
+<div class="space-y-12">
+  <div class="text-center p-8 bg-gray-900/50 border border-yellow-600/50 rounded-lg shadow-xl shadow-yellow-600/10">
+    <h1 class="text-5xl font-bold text-yellow-400 font-cinzel mb-4">Welcome to Star Wars: Online Roleplay</h1>
+    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+      Forge your destiny in the galaxy. Whether you are a noble Jedi, a cunning Sith, a daring smuggler, or a loyal soldier, your adventure begins here.
+    </p>
+    <div class="mt-8">
+      <a routerLink="/forum" class="inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-md text-lg hover:bg-yellow-400 transition-transform duration-300 hover:scale-105">Enter the HoloNet Forum</a>
+    </div>
+  </div>
+
+  <div class="bg-gray-950 p-6 rounded-lg border border-yellow-800/30">
+    <h2 class="text-3xl font-cinzel text-yellow-500 border-b-2 border-yellow-700/50 pb-3 mb-6">Latest Transmissions</h2>
+    <div class="space-y-6">
+      @for(item of newsItems; track item.title) {
+        <div class="bg-black/30 p-4 rounded-md border-l-4 border-yellow-600">
+          <h3 class="text-xl font-bold text-gray-100">{{ item.title }}</h3>
+          <p class="text-gray-400 mt-1">{{ item.content }}</p>
+          <p class="text-sm text-yellow-500/70 mt-3 text-right">{{ item.date }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>

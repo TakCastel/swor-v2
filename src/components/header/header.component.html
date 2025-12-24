@@ -1,0 +1,28 @@
+
+<header class="bg-black border-b-2 border-yellow-600 shadow-lg shadow-yellow-600/10">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-20">
+      <div class="flex items-center space-x-4">
+        <a routerLink="/" class="flex items-center space-x-3 text-yellow-400 hover:text-yellow-300 transition-colors">
+          <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L9.44 8.65L2 9.71L7.55 14.88L6.18 22L12 18.5L17.82 22L16.45 14.88L22 9.71L14.56 8.65L12 2Z" />
+          </svg>
+          <span class="text-3xl font-bold font-cinzel tracking-wider">SWOR.FR</span>
+        </a>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6">
+        @for (link of navLinks; track link.path) {
+          <a [routerLink]="link.path" routerLinkActive="text-yellow-400 border-b-2 border-yellow-400" [routerLinkActiveOptions]="{exact: true}" class="text-lg text-gray-300 hover:text-yellow-400 transition-colors duration-300 pb-1 border-b-2 border-transparent">{{ link.label }}</a>
+        }
+      </nav>
+      <div class="flex items-center">
+        <a routerLink="/profile" class="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd" />
+          </svg>
+          <span class="hidden lg:inline">Mon Profil</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

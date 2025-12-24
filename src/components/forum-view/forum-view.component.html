@@ -1,0 +1,44 @@
+
+@if (forum(); as f) {
+  <div class="bg-gray-950/70 rounded-lg border border-yellow-800/30 shadow-lg shadow-yellow-500/5">
+    <div class="flex justify-between items-center bg-yellow-500 p-3 rounded-t-lg">
+      <h2 class="text-2xl font-bold font-cinzel text-black">
+        {{ f.name }}
+      </h2>
+      <button class="bg-black text-yellow-400 font-semibold px-4 py-2 rounded-md hover:bg-gray-800 transition-colors">New Topic</button>
+    </div>
+    
+    <div class="divide-y divide-gray-800">
+      <div class="flex items-center p-3 bg-gray-900 font-bold text-yellow-500/80">
+        <div class="flex-grow">Topic</div>
+        <div class="w-1/6 text-center hidden md:block">Replies / Views</div>
+        <div class="w-1/4 text-sm hidden lg:block">Last Post</div>
+      </div>
+      @if (f.topics && f.topics.length > 0) {
+        @for (topic of f.topics; track topic.id) {
+          <div class="flex items-center p-4 hover:bg-gray-900 transition-colors duration-200">
+            <div class="flex-grow">
+              <a [routerLink]="['/topic', topic.id]" class="text-lg font-semibold text-yellow-400 hover:underline">{{ topic.title }}</a>
+              <p class="text-sm text-gray-400">by {{ topic.author }}</p>
+            </div>
+            <div class="w-1/6 text-center text-sm hidden md:block">
+              <p>{{ topic.replies }} Replies</p>
+              <p>{{ topic.views }} Views</p>
+            </div>
+            <div class="w-1/4 text-sm hidden lg:block">
+              <p class="truncate text-gray-300">{{ topic.lastPostInfo }}</p>
+            </div>
+          </div>
+        }
+      } @else {
+        <div class="p-8 text-center text-gray-400">
+          There are no topics in this forum yet.
+        </div>
+      }
+    </div>
+  </div>
+} @else {
+  <div class="text-center p-8">
+    <p class="text-xl text-yellow-500">Loading forum...</p>
+  </div>
+}

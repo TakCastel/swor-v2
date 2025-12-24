@@ -1,0 +1,27 @@
+
+@if (topic(); as t) {
+  <div>
+    <h1 class="text-4xl font-cinzel text-yellow-400 mb-6 pb-3 border-b-2 border-yellow-600/50">{{ t.title }}</h1>
+    <div class="space-y-6">
+      @for (post of t.posts; track post.id) {
+        <div class="flex space-x-4 bg-gray-950/70 border border-gray-800 rounded-lg overflow-hidden">
+          <div class="w-48 bg-black/30 p-4 text-center border-r border-gray-800 flex flex-col items-center">
+            <img [src]="post.authorAvatar" alt="Author Avatar" class="w-20 h-20 rounded-full border-2 border-yellow-500 mb-2">
+            <p class="font-bold text-yellow-400">{{ post.author }}</p>
+            <p class="text-sm text-gray-400">{{ post.authorTitle }}</p>
+          </div>
+          <div class="flex-grow p-4">
+            <div class="text-xs text-gray-500 border-b border-gray-800 pb-2 mb-3">
+              Posted: {{ post.timestamp }}
+            </div>
+            <div class="prose prose-invert prose-p:text-gray-300 prose-headings:text-yellow-400" [innerHTML]="post.content"></div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+} @else {
+  <div class="text-center p-8">
+    <p class="text-xl text-yellow-500">Loading topic...</p>
+  </div>
+}
