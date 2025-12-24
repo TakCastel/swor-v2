@@ -1,4 +1,3 @@
-
 export interface Post {
   id: number;
   author: string;
@@ -25,12 +24,27 @@ export interface Forum {
   topicsCount: number;
   postsCount: number;
   lastPostInfo: string;
+  type: 'category' | 'region' | 'sector' | 'planet' | 'location';
+  parentId?: number;
   subForums?: Forum[];
   topics?: Topic[];
+  coordinates?: { x: number; y: number }; // Pour la carte
 }
 
 export interface Category {
   id: number;
   name: string;
+  description?: string;
   forums: Forum[];
 }
+
+export interface Character {
+  id: string;
+  name: string;
+  currentLocationId: number;
+  isTraveling: boolean;
+  travelEndTime?: string;
+  travelOriginId?: number;
+  travelDestinationId?: number;
+}
+

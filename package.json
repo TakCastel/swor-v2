@@ -10,21 +10,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "latest",
+    "clsx": "latest",
+    "lucide-react": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest",
-    "clsx": "latest",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "tailwind-merge": "latest",
-    "tailwindcss": "latest",
-    "@tailwindcss/postcss": "latest"
+    "tailwindcss": "latest"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "typescript": "~5.8.2",
+    "autoprefixer": "latest",
     "postcss": "latest",
-    "autoprefixer": "latest"
+    "typescript": "~5.8.2"
   }
 }
