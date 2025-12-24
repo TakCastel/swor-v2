@@ -1,20 +1,27 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# Star Wars Roleplay Forum (Next.js)
 
-This contains everything you need to run your app locally.
+Ce projet est une version Next.js du forum de roleplay Star Wars (SWOR.FR).
 
-View your app in AI Studio: https://ai.studio/apps/drive/10cVT4dWM_VG12p-tDg8mBb2gKUkf6nJA
+## Technologies utilisées
 
-## Run Locally
+- **Next.js** (App Router)
+- **React**
+- **Tailwind CSS**
+- **TypeScript**
+- **Lucide React** (Icônes)
 
-**Prerequisites:**  Node.js
+## Lancement local
 
+1. Installez les dépendances :
+   ```bash
+   npm install
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2. Lancez le serveur de développement :
+   ```bash
+   npm run dev
+   ```
+
+3. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+

@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: var(--font-cinzel), serif;
+}
+
+:root {
+  --foreground-rgb: 229, 231, 235;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

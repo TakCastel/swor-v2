@@ -1,0 +1,25 @@
+export default function RulesPage() {
+  return (
+    <div className="bg-gray-950/70 p-8 rounded-lg border border-yellow-800/30 prose prose-invert max-w-none prose-h1:text-yellow-400 prose-h1:font-cinzel prose-h2:text-yellow-500 prose-a:text-yellow-400 hover:prose-a:text-yellow-300">
+      <h1>Règlement du Forum</h1>
+      
+      <h2>1. Respect et Courtoisie</h2>
+      <p>Le respect est la base de notre communauté. Toute insulte, harcèlement, discrimination ou comportement toxique envers un autre membre est strictement interdit. Soyez constructif et bienveillant dans vos échanges.</p>
+
+      <h2>2. Le Roleplay</h2>
+      <p>Restez dans votre personnage (In-Character, IC) dans les sections de jeu. Les discussions hors-jeu (Out-of-Character, OOC) doivent se faire dans les forums désignés ou en utilisant des balises spécifiques (ex: ((OOC: ...)) ).</p>
+      
+      <h2>3. Powergaming et Metagaming</h2>
+      <p>Le <strong>Powergaming</strong> (forcer des actions sur le personnage d'un autre joueur sans lui laisser de chance de réagir) et le <strong>Metagaming</strong> (utiliser des informations OOC dans un contexte IC) sont interdits. Le fair-play est essentiel.</p>
+
+      <h2>4. Contenu des Messages</h2>
+      <p>Évitez le spam, la publicité non sollicitée et le contenu inapproprié (NSFW, illégal, etc.). Assurez-vous que vos messages sont lisibles, avec une orthographe et une grammaire correctes.</p>
+
+      <h2>5. Création de Personnage</h2>
+      <p>Votre personnage doit être cohérent avec l'univers de Star Wars. Les personnages surpuissants (Mary Sue/Gary Stu) ne seront pas acceptés. Suivez les modèles de fiches de personnage fournis.</p>
+      
+      <p>Le non-respect de ces règles pourra entraîner des sanctions allant de l'avertissement à la suppression de compte. L'équipe de modération a le dernier mot en cas de litige.</p>
+    </div>
+  );
+}
+
